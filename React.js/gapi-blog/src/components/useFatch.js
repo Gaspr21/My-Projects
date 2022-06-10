@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
 
 
-  
-
 const useFatch = (url) =>{
   const [data,setData] =useState(null);
   const [isPending,setIsPending] = useState(true);
@@ -29,7 +27,7 @@ const useFatch = (url) =>{
           console.log(err.message);
         })
       },1000);
-  },[url]) 
+  },[url])
   return {data,isPending,error}
 }
 

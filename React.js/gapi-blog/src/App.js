@@ -1,14 +1,21 @@
-import Navbar from './NavBar';
-import Home from './Home';
-
+import Navbar from './components/NavBar';
+import Home from './components/Home';
+import {BrowserRouter, Route, Routes} from 'react-router-dom';
+import NewBlog from "./components/NewBlog"
+import BlogPreviw from './components/BlogPreview';
 
 function App() {
   return (
     <div className="App">
+      <BrowserRouter>
       <Navbar/>
-      <div className="content">
-        <Home/>
-      </div>
+        <div className="content">
+          <Routes>
+            <Route path="/" exact element={<Home/>}></Route>
+            <Route path="/blog/:id" exact element={<BlogPreviw/>}></Route>
+          </Routes>
+        </div>
+      </BrowserRouter>
     </div>
   );
 }
