@@ -9,11 +9,11 @@ function BlogPreviw(){
       <div className=" mb-4">
         <div className="flex justify-between">
       <h2 className="blogTitleColor">{propertiesOfTheBlog.title}</h2>
-      <div className="mt-3 text-slate-400">Posted {propertiesOfTheBlog.date}</div>
+      <div className="mt-3 text-slate-400">{propertiesOfTheBlog.date}</div>
         </div>
       <h1 className=" text-slate-400">Written by {propertiesOfTheBlog.author}</h1>
       </div>
-      <div>{propertiesOfTheBlog.body}</div>
+      <div className="mb-2">{propertiesOfTheBlog.body}</div>
     </div>
    );
 }
