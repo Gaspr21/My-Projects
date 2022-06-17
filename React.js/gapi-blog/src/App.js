@@ -1,7 +1,7 @@
+import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import Navbar from './components/NavBar';
 import Home from './components/Home';
-import {BrowserRouter, Route, Routes} from 'react-router-dom';
-import NewBlog from "./components/NewBlog"
+import CreateNewBlog from "./components/CreateNewBlog"
 import BlogPreviw from './components/BlogPreview';
 
 function App() {
@@ -13,6 +13,7 @@ function App() {
           <Routes>
             <Route path="/" exact element={<Home/>}></Route>
             <Route path="/blog/:id" exact element={<BlogPreviw/>}></Route>
+            <Route path="/create" exact element={<CreateNewBlog/>}></Route>
           </Routes>
         </div>
       </BrowserRouter>
